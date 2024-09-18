@@ -4,8 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-[dependencies]
 ethers = { version = "1.0", features = ["contract", "rustls"] }
 tokio = { version = "1", features = ["full"] }
-serde = { version = "1", features = ["derive"] }
-dotenv = "0.15"
+dotenv = "0.15"  # For loading environment variables
+serde = { version = "1", features = ["derive"] }  # For serializing and deserializing
+serde_json = "1.0"  # For handling JSON
+log = "0.4"  # Logging for better debugging
+env_logger = "0.9"  # Logging backend for Rust
+tokio-native-tls = "0.3"  # For TLS-based networking
+anyhow = "1.0"  # For better error handling
